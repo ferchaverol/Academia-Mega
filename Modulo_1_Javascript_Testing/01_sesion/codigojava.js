@@ -1,5 +1,5 @@
-var numero = 12345;
-var texto = "texto";
+var int = 12345;
+var strting = "texto";
 var booleano = true;
 var nombre = "Fernando";
 var apellido = "Chavero";
@@ -18,3 +18,11 @@ console.log(numero1 === numerotexto); // false
 console.log(numero1 == numerotexto);  // true
 
 //Actividad
+
+//Repaso
+//arimeticos
+//+,-,*,/,%,**
+// Comparación de operadores
+// ==, ===, !=, !==, <, >, >=, <=;
+//logicos
+//&&,||,!
