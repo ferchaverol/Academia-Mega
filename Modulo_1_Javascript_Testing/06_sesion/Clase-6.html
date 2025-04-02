@@ -1,0 +1,62 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"> <!-- Corrigiendo el charset -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notas Guardadas</title>
+        <style>
+            /* Aquí puedes agregar tus estilos si es necesario */
+        </style>
+    </head>
+    <body>
+        <h1>Notas Guardadas</h1>
+        <textarea id="nota"></textarea>
+        <br>
+        <button onclick="guardarnota()">Guardar nota</button>
+        <button onclick="borrarTodasNotas()">Borrar todas</button> <!-- Cambié el nombre de la función aquí -->
+        <br>
+        <h2>Lista de notas</h2>
+        <ul id="listanotas"></ul> <!-- Corregí la etiqueta ul -->
+        
+        <script>
+            function guardarnota(){
+                const texto = document.getElementById("nota").value.trim();  <!-- Corregí el método trim() -->
+                if(texto === "") return;
+
+                let notas = JSON.parse(localStorage.getItem("notas")) || [];
+                notas.push(texto);
+
+                localStorage.setItem("notas", JSON.stringify(notas));
+                document.getElementById("nota").value = "";  // Limpiar textarea después de guardar
+                mostrarnotas();
+            }
+
+            function mostrarnotas(){
+                const lista = document.getElementById("listanotas");
+                lista.innerHTML = "";  // Limpiar la lista antes de agregar nuevas notas
+                let notas = JSON.parse(localStorage.getItem("notas")) || [];
+
+                console.log(notas);  // Esto es útil para depuración, puedes eliminarlo si no lo necesitas
+                notas.forEach((nota, index) => {
+                    const li = document.createElement("li");
+                    li.innerHTML = `${nota} <span onclick="borrarNota(${index})">X</span>`; // Cambio aquí
+                    lista.appendChild(li);
+                });
+            }
+
+            function borrarTodasNotas(){  // Función para borrar todas las notas
+                localStorage.removeItem("notas");
+                mostrarnotas();
+            }
+
+            function borrarNota(index){  // Función para borrar una nota específica
+                let notas = JSON.parse(localStorage.getItem("notas")) || [];
+                console.log(index);  // Esto es útil para depuración, puedes eliminarlo si no lo necesitas
+                notas.splice(index, 1);
+                localStorage.setItem("notas", JSON.stringify(notas));
+                mostrarnotas();
+            }
+
+            mostrarnotas();  // Inicializa la lista de notas al cargar la página
+        </script>
+    </body>
+</html>
