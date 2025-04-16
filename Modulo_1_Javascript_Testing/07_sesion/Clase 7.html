@@ -1,0 +1,64 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notas Guardadas</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <script>
+            //console.log("Inicio");
+            //console.log("Tarea 1");
+            //console.log("Tarea 2");
+            
+            //setTimeout(()=>{
+            //    console.log("Este se ejecuta despues de 5 segundos")
+            //    console.log("Tarea 3")
+            //    console.log("Gracias por invitarme")
+            //}, 5000)
+
+            //console.log("Tarea 4")
+            //console.log("Tarea 5")
+            //console.log("fin");
+            
+
+            //promesa
+            console.log("Bienvenidoa la pagina web")
+            console.log("Primera tarea")
+
+            const promesa = new promesa((resolve, reject)=>{
+
+                setTimeout(()=>{
+                    let exito = true;
+                    if(exito) resolve("Segunda tarea")
+                    else reject("promesa rechazada");
+                },10000)
+
+            })
+
+            console.log(Promesa);
+            console.log("Tercera tarea")
+            promesa.then(resultado => console.log(resultado)).catch(error => console.log(error)).finally(()=>console.log("Promesa terminada"))
+            console.log("Cuarta tarea")
+
+            //Async/Await
+
+            async function obtenerDatos(){
+                try{
+                    console.log("Obteniendo datos...")
+                    let respuesta = new Promise(resolve =>
+                        setTimeout(()=>resolve("Datos recibidos"),4000))
+                        console.log(respuesta);
+                }catch(error){
+                    console.log("Error:", error);
+                }
+            }
+
+            obtenerDatos();
+            console.log("Este mensaje se muestranantes de que lleguenlos datos");
+
+        </script>
+    </body>
+</html>

@@ -1,30 +1,27 @@
 <!DOCTYPE html>        
 <html lang="es">
     <head>
-        <meta charset="UFT-8">
+        <meta charset="UTF-8"> <!-- Corrige el charset -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Clase de Javascript</title>
     </head>
     <body>
-        <h1>Calse 4: HTML:5 y CSS</HTML:5></h1>
-        <h2>Fundamentos e Introduccion</h2>
-        <h3>Html5:</h3>
-        <!--h4>hola</h4>
-        <h5>hola</h5>
-        <h6>hola</h6> -->
+        <h1>Clase 4: HTML5 y CSS</h1> <!-- Corrige el error en la etiqueta h1 -->
+        <h2>Fundamentos e Introducción</h2>
+        <h3>HTML5:</h3>
         
-        <!--Parrafos-->
-        <p>HTML (<strong>HyperText Markup Language</strong>)es un lenguaje de marcado utilizado para definir la estructura de una pagina web mediante <strong>etiquetas</strong></p>
-        <p>HTML (<strong>HyperText Markup Language</strong>)es un <i>lenguaje</i> de marcado utilizado para definir la estructura de una pagina web mediante <strong>etiquetas</strong></p>
+        <!-- Párrafos -->
+        <p>HTML (<strong>HyperText Markup Language</strong>) es un lenguaje de marcado utilizado para definir la estructura de una página web mediante <strong>etiquetas</strong></p>
+        <p>HTML (<strong>HyperText Markup Language</strong>) es un <i>lenguaje</i> de marcado utilizado para definir la estructura de una página web mediante <strong>etiquetas</strong></p>
         
-        <!--Enlaces y listas-->
-        <a href="https://www.google.com">Ir a google</a>
-        <a href="bienbenidos.html">Ir a mi pagina</a>
+        <!-- Enlaces y listas -->
+        <a href="https://www.google.com">Ir a Google</a>
+        <a href="bienvenidos.html">Ir a mi página</a>
 
         <ul>
             <li>Elemento 1</li>
             <li>Elemento 2</li>
-            <li>Elemento 2</li>
+            <li>Elemento 3</li> <!-- Cambié el segundo Elemento 2 por Elemento 3 -->
         </ul>
 
         <ol>
@@ -32,25 +29,28 @@
             <li>Elemento 2</li>
         </ol>
 
-        <img width="700" src="" alt="Este es mi foto">
-        
+        <img width="700" src="ruta/a/tu/imagen.jpg" alt="Este es mi foto"> <!-- Añadir ruta a la imagen -->
+
         <div>
-            Hola desde
+            Hola desde el div
         </div>
 
         <form action="">
-            <!--label for="">Nombre Completo:</label>-->
-            <input type="text" placeholder="Nombre Completo">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" placeholder="Nombre Completo">
 
-            <label for="">Edad:</label>
-            <input type="number">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad">
             
-            <label for="">Correo:</label>
-            <input type="email">
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo">
             
-            <label for="">Contraseña:</label>
-            <input type="password">
-            <input type="date">
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña">
+            
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha">
+            
             <button type="submit">Registrarse</button>
         </form>
 
